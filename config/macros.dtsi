@@ -1,3 +1,27 @@
+macro_amethyst: macro_amethyst{
+compatible = "zmk,behavior-macro";
+label = "macro_amethyst";
+#binding-cells = <0>;
+bindings = <&macro_tap &kp LEFT_SHIFT &kp LEFT_ALT>;
+};
+macro_hyper: macro_hyper{
+compatible = "zmk,behavior-macro";
+label = "macro_hyper";
+#binding-cells = <0>;
+bindings = <&kp LEFT_CONTROL>, <&kp LEFT_SHIFT>, <&kp LEFT_ALT>, <&kp LEFT_COMMAND>;
+};
+macro_meh: macro_meh{
+compatible = "zmk,behavior-macro";
+label = "macro_meh";
+#binding-cells = <0>;
+bindings = <&kp LCTRL>, <&kp LEFT_SHIFT>, <&kp LEFT_ALT>;
+};
+macro_messages: macro_messages{
+compatible = "zmk,behavior-macro";
+label = "macro_messages";
+#binding-cells = <0>;
+bindings = <&kp LEFT_CONTROL>, <&kp LEFT_SHIFT>, <&kp LEFT_ALT>, <&kp LEFT_COMMAND>, <&kp M>;
+};
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
 label = "macro_quotes";
@@ -33,4 +57,20 @@ compatible = "zmk,behavior-macro";
 label = "macro_kinesis";
 #binding-cells = <0>;
 bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
+};
+macro_vimsbb: macro_vim_select_between_brackets {
+compatible = "zmk,behavior-macro";
+label = "macro_vimsbb";
+#binding-cells = <0>;
+wait-ms = <30>;
+tap-ms = <40>;
+bindings = <&kp LS(V)>, <&kp PERCENT>;
+};
+macro_tmux_vim: macro_tmux_vim {
+compatible = "zmk,behavior-macro";
+label = "macro_tmux_vim";
+#binding-cells = <0>;
+wait-ms = <30>;
+tap-ms = <40>;
+bindings = <&kp LG(S)>, <&kp LBKT>;
 };
